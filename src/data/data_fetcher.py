@@ -25,7 +25,7 @@ class DataFetcher:
         
         # Download the dataset
         dataset_path = kagglehub.dataset_download(
-            "sourcecoke/faceforensics-c23"
+            "xdxd003/ff-c23"
         )
         
         # Move to our raw data directory
@@ -46,7 +46,7 @@ class DataFetcher:
         # This is a placeholder - adjust based on actual availability
         try:
             dataset_path = kagglehub.dataset_download(
-                "datasets/celeba-df"  # Verify actual dataset name
+                "reubensuju/celeb-df-v2"
             )
             
             target_path = self.raw_dir / "CelebDF"
