@@ -14,14 +14,15 @@ from src.config.settings import (IMAGE_SIZE, EYE_PATCH_SIZE,
 
 class SpatialExtractor:
     """Extract face parts using MediaPipe Face Mesh."""
-    
     def __init__(self, static_image_mode=True, max_num_faces=1):
+
         self.mp_face_mesh = mp.solutions.face_mesh
+
         self.face_mesh = self.mp_face_mesh.FaceMesh(
             static_image_mode=static_image_mode,
             max_num_faces=max_num_faces,
             refine_landmarks=True,
-            min_detection_confidence=FACE_MESH_CONFIDENCE
+            min_detection_confidence=0.5
         )
         
         # Define landmark indices for different face parts
